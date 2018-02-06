@@ -2,11 +2,11 @@
     "name": "ozparr/admin_templeta",
     "description": "Templeta AdminLTE for Laravel",
     "type": "project",
-    "license": "GPL",
+    "license": "MIT",
     "authors": [
         {
             "name": "Luis Ozuna",
-            "email": "Luis Ozuna@gmail.com"
+            "email": "lgozuna@gmail.com"
         }
     ],
     "minimum-stability": "dev",
