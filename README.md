@@ -1,14 +1,14 @@
 Admin Templeta
 ==========
 
-Este es el README de mi nueva aplicación MyNewApp.
-
-Este fichero se usa de ejemplo dentro del blog de aprendegit.com para crear un primer repositorio.
+Admin Templeta integra la famosa plantilla de administración AdminLTE a tu proyecto laravel fácil y rápido. 
 
 Instalación
 --------------------
-
-Edite el archivo composer.json
+Ejecuta en consola:
+```
+composer require ozparr/admin_templeta
+```
 
 Agrega los nuevos provider al array de `providers` en `config/app.php`:
 
@@ -21,7 +21,7 @@ Agrega los nuevos provider al array de `providers` en `config/app.php`:
     // ...
   ],
 ```
-Tambien los `aliases` que se encuentran donde mismo
+A continuación editar el array `aliases` en `config/app.php`:
 
 ```
 'aliases' => [

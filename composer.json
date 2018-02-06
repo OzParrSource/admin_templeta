@@ -1,7 +1,6 @@
 {
     "name": "ozparr/admin_templeta",
-    "description": "Templeta AdminLTE for Laravel",
-    "type": "project",
+    "description": "Templeta AdminLTE para laravel",
     "license": "MIT",
     "authors": [
         {
