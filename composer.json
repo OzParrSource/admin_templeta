@@ -10,13 +10,14 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "php" : ">=5.6.4",
-        "laravelcollective/html":"^5.4.0",
-        "laracasts/flash":"*"
+        "php" : ">=5.6.4"
+
 
     },
     "require-dev": {
-        "phpunit/phpunit" : "~5.0"
+        "phpunit/phpunit" : "~5.0",
+        "laravelcollective/html":"^5.4.0",
+        "laracasts/flash":"*"
     },
     "autoload": {
         "psr-4": {
