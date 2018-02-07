@@ -32,4 +32,5 @@ A continuación editar el array `aliases` en `config/app.php`:
 // ...
 ],
 ```
+A continuación ejecuta `php artisan vendor:publish`
 
