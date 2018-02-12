@@ -3,12 +3,13 @@
     <!-- sidebar: style can be found in sidebar.less -->
     <section class="sidebar">
         <!-- Sidebar user panel -->
+        <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="#IMAGEN_DE_USUARIO" class="img-circle" alt="User Image">
+                <img src="{!! url(Auth::user()->img)!!}" class="img-circle" alt="User Image">
             </div>
             <div class="pull-left info">
-                <p>Hola</p>
+                <p>{!! Auth::user()->name !!}</p>
                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
             </div>
         </div>
@@ -29,31 +30,46 @@
         <ul class="sidebar-menu" data-widget="tree">
             <li class="header">MENÚ</li>
 
-            <li class="">
-                <a href="">
+            <li class="{{ areActiveRoutes(['admin.index']) }}">
+                <a href="{!! route('admin.index') !!}">
                     <i class="fa fa-home fa-fw"></i> <span>Principal</span>
                     <span class="pull-right-container"></span>
                 </a>
             </li>
 
-            <!-- BLOG -->
-            <li class="">
-                <a href="#RUTAS">
-                    <i class="fa fa-users"></i> <span>Blog</span>
-                    <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
+            <!-- Menu administrador -->
+            @if(Route::has('adminUsuarios.index') )
+                @php
+                    $usersActive = [
+                        "adminUsuarios.index",
+                        "adminUsuarios.create",
+                        "adminUsuarios.update",
+                        "adminUsuarios.destroy",
+                        "adminUsuarios.edit",
+                        "adminUsuarios.editPass",
+                        "adminUsuarios.updatePass",
+
+                        "roles.store",
+                        "roles.create",
+                        "roles.update",
+                        "roles.edit",
+                        "roles.destroy",
+                    ];
+                @endphp
+            <li class="{{ areActiveRoutes($usersActive) }} treeview">
+                <a href="#">
+                    <i class="fa fa-cogs"></i> <span>Administrar</span>
+                    <span class="pull-right-container"></span>
+                    <i class="fa fa-angle-left pull-right"></i>
+                    </span>
                 </a>
                 <ul class="treeview-menu">
-                    <li class="">
-                        <a href="#">
-                            <i class="fa fa-search"></i> Buscar
-                        </a>
-                    </li>
-
-                    <li class=""><a href="#"><i class="fa fa-plus"></i>Nuevo</a></li>
+                    @if(Route::has('adminUsuarios.index') )
+                        @include('admin_login::templeta.menu.users.index')
+                    @endif
                 </ul>
             </li>
+            @endif
         </ul>
     </section>
     <!-- /.sidebar -->

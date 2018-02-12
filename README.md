@@ -18,6 +18,7 @@ Agrega los nuevos provider al array de `providers` en `config/app.php`:
     Ozparr\AdminTempleta\AdminTempletasServiceProvider::class,
     Collective\Html\HtmlServiceProvider::class,
     Laracasts\Flash\FlashServiceProvider::class,
+    Laravelista\Ekko\EkkoServiceProvider::class,
     // ...
   ],
 ```
@@ -29,6 +30,7 @@ A continuación editar el array `aliases` en `config/app.php`:
   'Form' => Collective\Html\FormFacade::class,
   'Html' => Collective\Html\HtmlFacade::class,
   'Flash'=> Laracasts\Flash\Flash::class,
+  'Ekko' => Laravelista\Ekko\Facades\Ekko::class,
 // ...
 ],
 ```

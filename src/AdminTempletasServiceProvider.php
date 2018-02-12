@@ -13,6 +13,7 @@ class AdminTempletasServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->loadRoutesFrom(__DIR__ . '/routes.php');
         $this->publishes([
             __DIR__.'/assets' => public_path('assets'),
         ], 'public');
@@ -27,6 +28,6 @@ class AdminTempletasServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->make('Ozparr\AdminTempleta\Controllers\HomeController');
     }
 }
