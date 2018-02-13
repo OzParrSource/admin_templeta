@@ -69,7 +69,7 @@
                 <ul class="nav navbar-nav">
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
-                        @if(Route::has('logout.index') )
+                        @if(Route::has('logout') )
                             <a href="{{ route('logout') }}" class="dropdown-toggle"
                                onclick="event.preventDefault();
                                                          document.getElementById('logout-form').submit();">
