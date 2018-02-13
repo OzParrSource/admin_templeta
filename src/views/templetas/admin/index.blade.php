@@ -69,15 +69,17 @@
                 <ul class="nav navbar-nav">
                     <!-- User Account: style can be found in dropdown.less -->
                     <li class="dropdown user user-menu">
-                        <a href="{{ route('logout') }}" class="dropdown-toggle"
-                           onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                            Salir
-                        </a>
+                        @if(Route::has('logout.index') )
+                            <a href="{{ route('logout') }}" class="dropdown-toggle"
+                               onclick="event.preventDefault();
+                                                         document.getElementById('logout-form').submit();">
+                                Salir
+                            </a>
 
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                            {{ csrf_field() }}
-                        </form>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        @endif
                     </li>
                     <!-- Control Sidebar Toggle Button -->
 

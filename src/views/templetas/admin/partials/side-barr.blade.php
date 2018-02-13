@@ -6,11 +6,15 @@
         <!-- Sidebar user panel -->
         <div class="user-panel">
             <div class="pull-left image">
-                <img src="{!! url(Auth::user()->img)!!}" class="img-circle" alt="User Image">
+                @isset(Auth::user()->img)
+                    <img src="{!! url(Auth::user()->img)!!}" class="img-circle" alt="User Image">
+                @endisset
             </div>
             <div class="pull-left info">
-                <p>{!! Auth::user()->name !!}</p>
-                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                @isset(Auth::user()->name)
+                    <p>{!! Auth::user()->name !!}</p>
+                    <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                @endisset
             </div>
         </div>
         <!-- search form -->
