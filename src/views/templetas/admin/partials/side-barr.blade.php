@@ -41,6 +41,9 @@
                 </a>
             </li>
 
+            @includeIf('admin_blog::templeta.menu.blog.index')
+
+
             <!-- Menu administrador -->
             @if(Route::has('adminUsuarios.index') )
                 @php
@@ -68,9 +71,7 @@
                     </span>
                 </a>
                 <ul class="treeview-menu">
-                    @if(Route::has('adminUsuarios.index') )
-                        @include('admin_login::templeta.menu.users.index')
-                    @endif
+                    @includeIf('admin_login::templeta.menu.users.index')
                 </ul>
             </li>
             @endif
