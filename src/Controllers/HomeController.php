@@ -10,7 +10,7 @@ class HomeController extends Controller
     public function __construct()
     {
         if(class_exists(\Ozparr\AdminLogin\Middleware\RolByLvl::class)){
-            $this->middleware('rolByLvl:1');
+            $this->middleware('rolByName:Moderador');
         }
     }
     /**

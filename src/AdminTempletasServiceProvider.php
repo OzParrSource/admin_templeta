@@ -17,6 +17,9 @@ class AdminTempletasServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__.'/assets' => public_path('assets'),
         ], 'public');
+        $this->publishes([
+            __DIR__.'/views/templetas/admin/partials/menu' => base_path('resources/views/admin/ozPartials')
+        ], 'views');
 
         $this->loadViewsFrom(__DIR__.'/views', 'admin_templeta');
     }
