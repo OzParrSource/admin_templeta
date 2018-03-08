@@ -47,7 +47,22 @@
     <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body class="hold-transition skin-blue sidebar-mini">
+
+
+@php
+    // Variables de configuracion
+    $titulo = config('templeta.title');
+    $skin =  config('templeta.skin');
+    $footer = config('templeta.footer');
+
+    if(config('templeta.sideBarCollapse') == 'true')
+        $collapse = 'sidebar-collapse';
+    else
+        $collapse = '';
+
+@endphp
+
+<body class="hold-transition {!! $skin !!} {!! $collapse !!} sidebar-mini">
 <div class="wrapper">
 
     <header class="main-header">
@@ -56,7 +71,7 @@
             <!-- mini logo for sidebar mini 50x50 pixels -->
             <span class="logo-mini"><b>A</b></span>
             <!-- logo for regular state and mobile devices -->
-            <span class="logo-lg"><b>adminLTE</b></span>
+            <span class="logo-lg"><b>{!! $titulo !!}</b></span>
         </a>
         <!-- Header Navbar: style can be found in header.less -->
         <nav class="navbar navbar-static-top">
@@ -130,11 +145,7 @@
 
     <!-- /.content-wrapper -->
     <footer class="main-footer">
-        <div class="pull-right hidden-xs">
-            <b>Version</b> 0.1
-        </div>
-        <strong>powered by Luis Ozuna</strong> All rights
-        reserved.
+        {!! $footer !!}
     </footer>
 
 </div>
