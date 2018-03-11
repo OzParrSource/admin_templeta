@@ -162,8 +162,10 @@
 <!-- Bootstrap 3.3.7 -->
 {!! Html::script('assets/adminLTE/bower_components/bootstrap/dist/js/bootstrap.min.js') !!}
 <!-- Morris.js charts -->
+<!--
 {!! Html::script('assets/adminLTE/bower_components/raphael/raphael.min.js') !!}
 {!! Html::script('assets/adminLTE/bower_components/morris.js/morris.min.js') !!}
+-->
 <!-- Sparkline -->
 {!! Html::script('assets/adminLTE/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js') !!}
 <!-- jvectormap -->
@@ -184,8 +186,9 @@
 {!! Html::script('assets/adminLTE/bower_components/fastclick/lib/fastclick.js') !!}
 <!-- AdminLTE App -->
 {!! Html::script('assets/adminLTE/dist/js/adminlte.min.js') !!}
-<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<!-- AdminLTE dashboard demo (This is only for demo purposes)
 {!! Html::script('assets/adminLTE/dist/js/pages/dashboard.js') !!}
+        -->
 <!-- AdminLTE for demo purposes -->
 {!! Html::script('assets/adminLTE/dist/js/demo.js') !!}
 <!--Select2-->
