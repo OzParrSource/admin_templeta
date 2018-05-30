@@ -5,7 +5,7 @@ slot('botones')
 slot('pie')
 
 -->
-<div class="box @isset($tipo){!! $tipo !!}" @endisset>
+<div class="box @isset($tipo){!! $tipo !!} @endisset">
     @isset($titulo)
         <div class="box-header with-border">
             <h3 class="box-title">{!! $titulo !!}</h3>
