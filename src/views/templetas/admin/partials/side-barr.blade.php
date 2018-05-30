@@ -40,7 +40,7 @@
 
 
             <!-- Menu administrador -->
-            @if(Route::has('adminUsuarios.index') )
+            @if(Route::has('adminUsuarios.index') && Auth::user()->rol->nivel <= 1)
                 @php
                     $usersActive = [
                         "adminUsuarios.index",
@@ -69,6 +69,7 @@
                     @includeIf('admin_login::templeta.menu.users.index')
                 </ul>
             </li>
+
             @endif
         </ul>
     </section>

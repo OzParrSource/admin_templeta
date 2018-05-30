@@ -22,6 +22,10 @@ class AdminTempletasServiceProvider extends ServiceProvider
         ], 'views');
 
         $this->publishes([
+            __DIR__.'/views/components' => base_path('resources/views/components')
+        ], 'views');
+
+        $this->publishes([
             __DIR__.'/config/templeta.php' => config_path('templeta.php')
         ], 'config');
 
