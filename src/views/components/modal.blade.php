@@ -2,6 +2,9 @@
 PARAMETROS
 
 ['id'=>'','size'=>'','titulo'=>'']
+
+slots
+ $pie
 -->
 
 <div class="modal fade" id="{!! $id !!}" role="dialog" aria-labelledby="myModalLabel" style="display: none;" >
@@ -13,9 +16,14 @@ PARAMETROS
                     <h3 class="modal-title"> {!! $titulo !!} </h3>
                 @endif
             </div>
-
-            {{ $slot }}
-
+            <div class="modal-body">
+                {{ $slot }}
+            </div>
+            @isset($pie)
+                <div class="modal-footer">
+                    {{ $pie  }}
+                </div>
+            @endisset
         </div>
     </div>
 </div>

@@ -16,18 +16,18 @@ class AdminTempletasServiceProvider extends ServiceProvider
         $this->loadRoutesFrom(__DIR__ . '/routes.php');
         $this->publishes([
             __DIR__.'/assets' => public_path('assets'),
-        ], 'public');
+        ], 'OzParrAdmin');
         $this->publishes([
             __DIR__.'/views/templetas/admin/partials/menu' => base_path('resources/views/admin/ozPartials')
-        ], 'views');
+        ], 'OzParrAdmin');
 
         $this->publishes([
             __DIR__.'/views/components' => base_path('resources/views/components')
-        ], 'views');
+        ], 'OzParrAdmin');
 
         $this->publishes([
             __DIR__.'/config/templeta.php' => config_path('templeta.php')
-        ], 'config');
+        ], 'OzParrAdmin');
 
         $this->loadViewsFrom(__DIR__.'/views', 'admin_templeta');
     }

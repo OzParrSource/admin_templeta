@@ -6,15 +6,15 @@ slot('pie')
 
 -->
 <div class="box @isset($tipo){!! $tipo !!} @endisset">
-    @isset($titulo)
+    @if(isset($titulo) || isset($botones))
         <div class="box-header with-border">
-            <h3 class="box-title">{!! $titulo !!}</h3>
+            <h3 class="box-title">@isset($titulo){!! $titulo !!}@endisset</h3>
 
             <div class="box-tools pull-right">
-                @isset($botones){!! $botones !!}@endisset
+                @isset($botones){{$botones}}  @endisset
             </div>
         </div>
-    @endisset
+    @endif
 <!-- /.box-header -->
     <div class="box-body">
         {{ $slot }}
